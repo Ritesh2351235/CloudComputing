@@ -1,8 +1,0 @@
-{
-  "functions": {
-    "server.js": {
-      "runtime": "nodejs12.x",
-      "memory": 512
-    }
-  }
-}
