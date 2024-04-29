@@ -19,7 +19,7 @@ const App = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch('http://localhost:5000/api/students', {
+      const response = await fetch('https://cloud-computing-api.vercel.app/api/students', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
@@ -43,7 +43,7 @@ const App = () => {
 
   const fetchStudents = async () => {
     try {
-      const response = await fetch('http://localhost:5000/api/students');
+      const response = await fetch('https://cloud-computing-api.vercel.app/api/students');
       const data = await response.json();
       console.log(data);
       // Update students state with fetched data
