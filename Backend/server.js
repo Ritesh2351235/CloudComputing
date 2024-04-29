@@ -8,14 +8,12 @@ const app = express();
 
 // Middleware
 app.use(bodyParser.json());
-app.use(cors(
-  {
-    origin: ["https://studentinfo-beta.vercel.app/"],
-    methods: ["POST", "GET"],
-    credentials: true
-  }
+app.use(cors({
+  origin: ["https://studentinfo-beta.vercel.app"],
+  methods: ["POST", "GET"],
+  credentials: true
+}));
 
-));
 
 // MongoDB Connection
 mongoose.connect('mongodb+srv://admin:admin@cluster0.4qg9b2z.mongodb.net/Cloud', {
