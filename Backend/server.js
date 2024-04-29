@@ -8,7 +8,14 @@ const app = express();
 
 // Middleware
 app.use(bodyParser.json());
-app.use(cors());
+app.use(cors(
+  {
+    origin: [""],
+    methods: ["POST", "GET"],
+    credentials: true
+  }
+
+));
 
 // MongoDB Connection
 mongoose.connect('mongodb+srv://admin:admin@cluster0.4qg9b2z.mongodb.net/Cloud', {
