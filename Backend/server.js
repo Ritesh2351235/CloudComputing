@@ -10,7 +10,6 @@ const app = express();
 app.use(bodyParser.json());
 app.use(cors());
 
-
 // MongoDB Connection
 mongoose.connect('mongodb+srv://admin:admin@cluster0.4qg9b2z.mongodb.net/Cloud', {
   useNewUrlParser: true,
@@ -52,6 +51,11 @@ app.get('/api/students', async (req, res) => {
     console.error('Error:', error);
     res.status(500).json({ message: 'Server Error' });
   }
+});
+
+// Simple route to display a message when backend is running
+app.get('/', (req, res) => {
+  res.send('Backend is running');
 });
 
 // Server
